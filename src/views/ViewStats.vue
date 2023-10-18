@@ -20,9 +20,11 @@
     </table>
 
     <input
+      v-model="feedbackInput"
       type="text"
       class="input"
       placeholder="Do you love Noteballs?"
+      maxlength="100"
       v-autofocus
     />
   </div>
@@ -30,6 +32,11 @@
 
 <script setup>
 import { useNotesStore } from '@/stores/notesStore'
+import { useWatchCharacters } from '@/hooks/useWatchCharacters'
+import { ref } from 'vue'
 
 const notesStore = useNotesStore()
+
+const feedbackInput = ref('')
+useWatchCharacters(feedbackInput, 50)
 </script>

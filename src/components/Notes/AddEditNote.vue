@@ -15,6 +15,7 @@
           v-autofocus
           v-model="newNote"
           class="textarea"
+          maxlength="100"
           :placeholder="placeholder"
           ref="textareaRef"
         />

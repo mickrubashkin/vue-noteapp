@@ -37,7 +37,7 @@ const props = defineProps({
   },
 })
 
-const charactersLength = computed(() => {
+const characterLength = computed(() => {
   const length = props.note.content.length
   const description = length > 1 ? 'characters' : 'character'
 
