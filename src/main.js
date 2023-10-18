@@ -2,5 +2,12 @@ import { createApp } from 'vue'
 import router from '@/router'
 import { createPinia } from 'pinia'
 import App from './App.vue'
+import { vAutofocus } from '@/directives/vAutofocus'
 
-createApp(App).use(router).use(createPinia()).mount('#app')
+const app = createApp(App)
+
+app.use(router)
+app.use(createPinia())
+app.directive('autofocus', vAutofocus)
+
+app.mount('#app')

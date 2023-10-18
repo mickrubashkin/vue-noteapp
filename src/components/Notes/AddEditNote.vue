@@ -12,6 +12,7 @@
     <div class="field">
       <div class="control">
         <textarea
+          v-autofocus
           v-model="newNote"
           class="textarea"
           :placeholder="placeholder"
