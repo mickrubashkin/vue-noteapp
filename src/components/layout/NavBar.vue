@@ -61,6 +61,7 @@ const showMobileNav = ref(false)
 
 const navbarMenuRef = ref(null)
 const navbarBurgerRef = ref(null)
+
 onClickOutside(
   navbarMenuRef,
   () => {
